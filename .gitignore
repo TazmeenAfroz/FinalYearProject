@@ -18,7 +18,6 @@ ENV/
 # PyTorch
 *.pth
 *.pt
-!best_model.pth
 
 # Jupyter Notebook
 .ipynb_checkpoints
