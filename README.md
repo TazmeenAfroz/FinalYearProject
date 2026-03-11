@@ -10,9 +10,10 @@ latest/
 │   ├── model.py            # GazeSymCAT model architecture
 │   ├── dataset.py          # Data loading and eye extraction
 │   ├── utils.py            # Utility functions
-│   ├── config.py           # Training configuration
-│   └── model/              # Model weights
-│       └── best_model.pth  # Trained model checkpoint
+│   └── config.py           # Training configuration
+│
+├── weights/                 # Model weights (see weights/README.md)
+│   └── best_model.pth      # Trained model (1.1GB - download separately)
 │
 ├── backend/                 # FastAPI backend server
 │   ├── main.py             # API endpoints & WebSocket
@@ -47,6 +48,22 @@ latest/
 - Python 3.8+ with pip
 - Node.js 16+ with npm
 - Webcam (for live testing)
+
+### 0. Download Model Weights ⚠️
+
+**IMPORTANT**: The trained model file (1.1GB) is not included in the repository.
+
+You need to download `best_model.pth` and place it in the `weights/` directory:
+
+```bash
+# Create weights directory if it doesn't exist
+mkdir -p weights
+
+# Download the model file (provide your own cloud link)
+# Place best_model.pth in: weights/best_model.pth
+```
+
+See [weights/README.md](weights/README.md) for details.
 
 ### 1. Install Python Dependencies
 
