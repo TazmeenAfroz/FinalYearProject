@@ -1,0 +1,151 @@
+/* ── LiveCamera component ─────────────────────────────────────────────── */
+
+.live__canvas-hidden {
+  display: none;
+}
+
+.live__controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.live__btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.live__btn:active {
+  transform: scale(0.97);
+}
+
+.live__btn--start {
+  background: var(--green);
+  color: #0f172a;
+}
+
+.live__btn--start:hover {
+  background: #22c55e;
+}
+
+.live__btn--stop {
+  background: var(--red);
+  color: #fff;
+}
+
+.live__btn--stop:hover {
+  background: #ef4444;
+}
+
+.live__fps {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.live__error {
+  background: rgba(248, 113, 113, 0.12);
+  border: 1px solid var(--red);
+  color: var(--red);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Feed container: side-by-side when both feeds are visible */
+.live__feed-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.live__feed-container--hidden {
+  display: none;
+}
+
+.live__feed {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.live__video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.live__annotated {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.live__feed-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.live__placeholder {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+/* Stats grid */
+.live__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.live__stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.live__stat--wide {
+  grid-column: 1 / -1;
+}
+
+.live__stat-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.live__stat-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--green);
+  font-variant-numeric: tabular-nums;
+}
